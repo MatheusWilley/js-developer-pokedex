@@ -4,75 +4,111 @@
 }
 
 .normal{
-    background-color: #a6a877;
+    background-color: #D9C2A3;
+    color: #4A3931;
+    font-weight: 400;
 }
 
 .grass{
-    background-color: #77c850;
+    background-color: #48D0B0;
+    color: #043D29;
+    font-weight: 400;
 }
 
 .fire{
-    background-color: #ee7f30;
+    background-color: #FF6D6D;
+    color: #4A0C0C;
+    font-weight: 400;
 }
 
 .water{
-    background-color: #678fee;
+    background-color: #4DAAFF;
+    color: #002E73;
+    font-weight: 400;
 }
 
 .electric{
-    background-color: #f7cf2e;
+    background-color: #FFD86F;
+    color: #4D3700;
+    font-weight: 400;
 }
 
 .ice{
-    background-color: #98d5d7;
+    background-color: #9AE1E1;
+    color: #004F4F;
+    font-weight: 400;
 }
 
 .ground{
-    background-color: #dfbf69;
+    background-color: #E2B87F;
+    color: #4A2F14;
+    font-weight: 400;
 }
 
 .flying{
-    background-color: #a98ff0;
+    background-color: #A9E0FF;
+    color: #003A62;
+    font-weight: 400;
 }
 
 .poison{
-    background-color: #a040a0;
+    background-color: #C183FF;
+    color: #2F0052;
+    font-weight: 400;
 }
 
 .fighting{
-    background-color: #bf3029;
+    background-color: #FF7C7C;
+    color: #4D1A1A;
+    font-weight: 400;
 }
 
 .psychic{
-    background-color: #f65687;
+    background-color: #FF92C3;
+    color: #4A1D3A;
+    font-weight: 400;
 }
 
 .dark{
-    background-color: #725847;
+    background-color: #5A546D;
+    color: #EAEAEA;
+    font-weight: 400;
 }
 
 .rock{
-    background-color: #b8a137;
+    background-color: #CAB386;
+    color: #3A2A1E;
+    font-weight: 400;
 }
 
 .bug{
-    background-color: #a8b720;
+    background-color: #B1E05E;
+    color: #2D4A0F;
+    font-weight: 400;
 }
 
-.ghost{
-    background-color: #6e5896;
+.ghost {
+    background-color: #9E88FF;
+    color: #2D1E5A;
+    font-weight: 400;
 }
 
-.steel{
-    background-color: #b9b7cf;
+.steel {
+    background-color: #A5C4DC;
+    color: #2E405A;
+    font-weight: 400;
 }
 
-.dragon{
-    background-color: #6f38f6;
+.dragon {
+    background-color: #886DFF;
+    color: #2E2E66;
+    font-weight: 400;
 }
 
-.fairy{
-    background-color: #f9aec7;
+.fairy {
+    background-color: #FFA9F2;
+    color: #4D003A;
+    font-weight: 400;
 }
 
 .content h1{
@@ -97,10 +133,11 @@
     /* height: 100px; */
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .pokemon .name{
-    color: white;
+    color: #ffffff;
     margin: auto 0;
     margin-bottom: 0;
     text-transform: capitalize;
@@ -129,7 +166,9 @@
 }
 
 .pokemon .type{
-    color: #ffffff;
+    /* color: #ffffff; */
+    text-align: center;
+    letter-spacing: .15rem;
     padding: .25rem .5rem;
     margin: .4rem 0;
     font-size: .8rem;
@@ -164,6 +203,85 @@
 .pagination button:hover{
     background-color: #5a66b4;
     transform: scale(1.05);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro */
+    padding-top: 60px;
+}
+
+.pokemonModal{
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+.pokemonModal h2{
+    color: #ffffff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.divPokemonImage{
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center;   /* Centraliza horizontalmente */
+    justify-content: center;
+    margin: 1em auto;
+}
+
+.pokemonModal img{
+    width: 100%;
+    max-width: 120px;
+}
+
+.pokemonModal ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: .5em 0;
+}
+
+.pokemonModal .type {
+    /* color: #ffffff; */
+    text-align: center;
+    letter-spacing: .15rem;
+    padding: .25rem .5rem;
+    margin: .4rem .2rem;
+    font-size: .8rem;
+    border-radius: .4rem;
+    filter: brightness(1.2);
+    max-width: 80px;
+}
+
+.pokemonModal .pokemonStatsClass{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pokemonStatsClass span{
+    margin: 1em 1.5em;
+}
+
+.pokemonModal button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #25b884;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 379px){

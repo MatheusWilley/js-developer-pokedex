@@ -11,6 +11,12 @@ function convertPokeApiDetailToPokemon(pokeDetail){
 
     // Atribui o primeiro tipo como o principal
     pokemon.type = pokemon.types[0];
+
+    //ADICIONA ALTURA, PESO E HABILIDADES
+    pokemon.height = pokeDetail.height;
+    pokemon.weight = pokeDetail.weight;
+    pokemon.abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
+
     return pokemon;
 }
 
