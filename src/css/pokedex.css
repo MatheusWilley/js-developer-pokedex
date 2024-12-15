@@ -295,7 +295,7 @@
         grid-template-columns: 1fr 1fr;
     }
     .pokemon .detail img{
-        max-width: 100%;
+        width: 50%;
         height: 85px;
     }
     .pokemon{
